@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*---BODY---*/
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
+
+body {
+  margin: 0 auto; }
+
+/*COLORS*/
+/*--VARIABLES AND MIXINS--*/
+/*--MEDIA QUERIES*/
+/*--GRID--*/
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-1 {
+    width: 100%; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(((100% - 3 * 6rem) / 4) * 3 + 2 * 6rem); }
+
+/*---NAVBAR---*/
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding: 10px 0;
+  /* '' */
+  /* '' */
+  /* '' */ }
+  .navigation .navigation__list--item {
+    list-style: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #357588;
+    padding-left: 16px;
+    float: left; }
+    .navigation .navigation__list--item:not(:last-of-type):after {
+      content: "|";
+      padding-left: 10px; }
+    .navigation .navigation__list--item a:link, .navigation .navigation__list--item a:active {
+      text-decoration: none;
+      color: #357588;
+      transition: border-bottom 0.2s, color 0.2s;
+      border-bottom: 2px solid transparent; }
+    .navigation .navigation__list--item a:hover, .navigation .navigation__list--item a:visited {
+      color: #34495e;
+      transition: border-bottom 0.2s;
+      border-bottom: 2px solid #f39c12; }
+  .navigation .icon-firefox:before {
+    content: '\e840'; }
+  .navigation .icon-chrome:before {
+    content: '\e841'; }
+  .navigation .icon-opera:before {
+    content: '\e842'; }
+
+/*---HEADER---*/
+header .baner {
+  position: relative; }
+  header .baner .baner__img {
+    margin: 0 auto;
+    width: 100%;
+    filter: brightness(70%);
+    box-shadow: 1px 1px 5px #d4d1d1; }
+    header .baner .baner__img:hover {
+      filter: brightness(50%); }
+  header .baner .baner__text {
+    position: absolute;
+    font-size: 30px;
+    right: 30%;
+    top: 50%;
+    color: #fff;
+    text-shadow: 4px 4px 4px #000; }
+    header .baner .baner__text :hover {
+      transition-delay: 0.5s; }
+
+/*---SECTION---*/
+.main {
+  margin: 30px 20px;
+  display: flex; }
+  .main .main__item {
+    border: 1px solid #d4d1d1;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 5px #d4d1d1; }
+  .main .main__item--text-wrapper {
+    padding: 15px; }
+  .main .main__item--title {
+    font-size: 25px;
+    padding: 8px 0; }
+  .main .main__item--img img {
+    width: 100%; }
+  .main .main__item--img:hover {
+    transform: scale(0.9);
+    filter: opacity(0.8); }
+  .main .main__item--text {
+    color: #6a6c6e;
+    padding: 20px 0;
+    font-size: 14px; }
+  .main .main__item--country {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border: 1px solid green;
+    background: green;
+    width: 20%;
+    color: #fff; }
+  .main .main__item--date {
+    color: #d4d1d1;
+    font-style: italic;
+    font-size: 12px; }
+  .main .main__item--readmore {
+    border: 1px solid lightgray;
+    width: 100px;
+    padding: 5px 10px;
+    text-align: center;
+    color: #6a6c6e; }
+    .main .main__item--readmore:hover, .main .main__item--readmore :active {
+      background: #f39c12;
+      color: #fff;
+      cursor: pointer; }
+
+.motto {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  padding: 20px;
+  font-family: 'Shadows Into Light', cursive; }
